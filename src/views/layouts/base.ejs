@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kelpui@1/css/kelp.css">
+    <link rel="stylesheet" href="/kelp.custom.css">
     <script type="module" src="https://cdn.jsdelivr.net/npm/kelpui@1/js/kelp.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/starfederation/datastar@1.0.0-RC.7/bundles/datastar.js"></script>
-    <title>Stash Panda Inventory</title> 
+
+    <title><%= title ?? "My App" %></title> 
 </head>
 <body>
-    <div class="container-xs">
-        <h1>Welcome to Stash Panda</h1>
-        <button data-on:click="@get('/sse')">GET /sse</button>
-        <p id="toMerge">merge here</p>
+    <div class="container">
+        <header>
+            <h1>My Bun + Elysia App</h1>
+
+            <%- include("../partials/nav-main") %>
+        </header>
+
+        <main id="app">
+            <!-- Page content injected here -->
+            <%- body %>
+        </main>
+        
+        <footer>
+            <small>© <%= new Date().getFullYear() %></small>
+        </footer>
     </div>
 </body>
 </html>

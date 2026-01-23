@@ -3,7 +3,7 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/server.ts"
   },
   "dependencies": {
     "@elysiajs/static": "^1.4.7",
@@ -12,6 +12,7 @@
     "@starfederation/datastar-sdk": "^1.0.0-RC.3",
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^25.0.9",
+    "ejs": "^4.0.1",
     "elysia": "latest",
     "prisma": "^7.2.0"
   },

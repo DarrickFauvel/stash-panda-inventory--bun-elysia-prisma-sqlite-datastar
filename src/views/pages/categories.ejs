@@ -1,0 +1,10 @@
+<div>
+  <h2>Categories</h2>
+
+  <div id="counter" data-signals='{"count":0}'>
+    Count: <span data-text="$count"></span>
+  </div>
+  
+  <button data-on:click="@get('/sse')">GET /sse</button>
+  <p id="toMerge">merge here</p>
+</div>

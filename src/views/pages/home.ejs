@@ -1,0 +1,11 @@
+<div>
+  <h2>Welcome</h2>
+  <p>Hello from EJS + Elysia + Bun 👋</p>
+
+  <div id="counter" data-signals='{"count":0}'>
+    Count: <span data-text="$count"></span>
+  </div>
+  
+  <button data-on:click="@get('/sse')">GET /sse</button>
+  <p id="toMerge">merge here</p>
+</div>
