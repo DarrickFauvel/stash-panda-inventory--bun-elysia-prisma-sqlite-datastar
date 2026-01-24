@@ -1,12 +1,16 @@
-<nav class="navbar">
-	<a class="logo" href="/">Stash Panda</a>
-	<ul>
-		<% navItems.forEach(item => { %>
-			<%- include("nav-item", {
-				href: item.href,
-				label: item.label,
-				active: current === item.key
-			}) %>
-		<% }) %>
-	</ul>
+<nav>
+  <ul class="split">
+    <li><a href="/">Stash Panda</a></li>
+    <li>
+      <ul>
+        <% navItems.forEach(item => { %>
+        <%- include("nav-item", {
+              href: item.href,
+              label: item.label,
+              active: current === item.key
+            }) %>
+        <% }) %>
+    </li>
+    </ul>
+  </ul>
 </nav>
